@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="review-section">
+            <div class="container">
+                <h1>Write your Review about our service</h1>
+                <button id="btn1">Write Now</button>
+                <p id="text"></p>
+            </div>
+        </div>
+        <div class="counter-section">
+            <div class="container">
+
+                
+                <h1>Counter App</h1>
+                <input type="text" name="" id="result" value="0">
+                <div class="button-section">
+                    <button  class="btn-all" id="btn2">Increase</button>
+                    <button  class="btn-all" id="btn3">Decrease</button>
+                    <button  class="btn-all" id="btn4">Reset</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function promtOn() {
+            var x = prompt("Write your Review:");
+            document.getElementById("text").innerHTML = x;
+        }
+        document.getElementById("btn1").addEventListener('click', promtOn);
+
+        var count = 0;
+
+        function increase() {
+
+            document.getElementById("result").value = ++count;
+        }
+        function decrease() {
+            document.getElementById("result").value = --count;
+        }
+        function reset() {
+            document.getElementById("result").value = '0';
+        }
+
+        document.getElementById("btn2").addEventListener('click', increase);
+        document.getElementById("btn3").addEventListener('click', decrease);
+        document.getElementById("btn4").addEventListener('click', reset);
+
+
+    </script>
+
+</body>
+
+</html>
